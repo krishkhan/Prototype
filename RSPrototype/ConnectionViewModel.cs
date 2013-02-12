@@ -8,6 +8,9 @@ using System.Net;
 using System.Net.Sockets;
 using Microsoft.Win32;
 using System.Windows;
+using System.IO;
+using System.Xml;
+using System.Xml.XPath;
 
 namespace Yti.Yget.RemoteClient
 {
@@ -16,9 +19,10 @@ namespace Yti.Yget.RemoteClient
         public event PropertyChangedEventHandler PropertyChanged;
         private String _logText;
         private byte[] bytes = new byte[1024];
-        
-        private List<String>  _channelNames; 
-
+        private String _configFilePath;
+        private List<String>  _channelNames;
+        private CommsObject _selectedChannelDetails;
+        private int _selectedChannelIndex;
 
         public ICommand ConnectCommand { get; set; }
 
@@ -37,9 +41,57 @@ namespace Yti.Yget.RemoteClient
            
         }
 
+        public CommsObject SelectedChannelDetails
+        {
+            get
+            {
+                return _selectedChannelDetails;
+            }
+            set
+            {
+                _selectedChannelDetails = value;
+                OnPropertyChanged("SelectedChannelDetails");
+            }
+        }
+
+        public int SelectedChannelIndex
+        {
+            get
+            {
+                return _selectedChannelIndex;
+            }
+            set
+            {
+                _selectedChannelIndex = value;
+                OnPropertyChanged("SelectedChannel");
+                if (_selectedChannelIndex >= 0)
+                {
+                    CommsObject commsObj;
+                    ConfigurationManager.GetInstance().GetChannelDetails(_channelNames[SelectedChannelIndex],out commsObj );
+                    SelectedChannelDetails = commsObj;
+                }
+
+            }
+        }
+
+        public String ConfigFilePath { get { return _configFilePath ;}
+            set
+            { 
+                _configFilePath =value  ;
+                OnPropertyChanged("ConfigFilePath");
+            }
+        }
+        
+        
         public void SetSelectedConfigurationFile(String fileName)
         {
-            MessageBox.Show(fileName + "Selected");
+            ConfigurationManager.GetInstance().SetPath = fileName;
+            List<String> channelNamesList;
+            ConfigurationManager.GetInstance().GetAvailableChannels(out channelNamesList);
+            ChannelNames = channelNamesList;
+            ConfigFilePath = fileName;
+            SelectedChannelIndex = 0;
+
         }
         public ConnectionViewModel()
         {
@@ -72,14 +124,7 @@ namespace Yti.Yget.RemoteClient
             }
         }
 
-        private void OnPropertyChanged(String propertyName)
-        {
-            PropertyChangedEventHandler handler = PropertyChanged;
-            if (handler != null)
-            {
-                handler(this, new PropertyChangedEventArgs(propertyName));
-            }
-        }
+        
 
         private void StartClient()
         {
@@ -138,6 +183,15 @@ namespace Yti.Yget.RemoteClient
             catch (Exception e)
             {
                 Console.WriteLine(e.ToString());
+            }
+        }
+
+        private void OnPropertyChanged(String propertyName)
+        {
+            PropertyChangedEventHandler handler = PropertyChanged;
+            if (handler != null)
+            {
+                handler(this, new PropertyChangedEventArgs(propertyName));
             }
         }
 
@@ -221,44 +275,11 @@ namespace Yti.Yget.RemoteClient
         public List<String> SCS { get; set; }
 
         public String Port { get; set; }
+
+        public String Type { get; set; }
         
     }
 
 
-    public class ConfigurationManager
-    {
-        private String _filePath;
-        
-        public String SetPath
-        {
-            get
-            {
-                return _filePath;
-            }
-            set
-            {
-                _filePath = value;
-        
-            }
-        }
-
-        
-        public void GetAvailableChannels(out List<String> channelNames)
-        {
-            channelNames = new List<string>(); 
-            channelNames.AddRange(new List<String>(){"Local","Remote"}); 
-        }
-
-        public void GetChannelDetails(String channelName, out CommsObject commsInfo)
-        {
-            commsInfo = new CommsObject();
-            commsInfo.ChannelName = channelName;
-            commsInfo.ConnectionPoint = "198.162.2.1";
-            commsInfo.SCS = new List<String>(){"1124","23242"};
-            commsInfo.TimeOut = "121223";
-            commsInfo.Port = "12321";
-
-        }
-
-    }
+    
 }
