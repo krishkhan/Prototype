@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ConnectionConfiguration>
+  <CommsChannel name="TCPIPLocal" >
+    <Type>TCPIP</Type>
+    <ConnectionPoint>192.168.2.1</ConnectionPoint>
+    <Port>11003</Port>
+    <TIMEOUT>1122</TIMEOUT>
+    <SCS></SCS>
+  </CommsChannel>
+  <CommsChannel name="TCPIPRemote" >
+    <Type>TCPIP</Type>
+    <ConnectionPoint>192.168.2.2</ConnectionPoint>
+    <Port>11003</Port>
+    <TIMEOUT>1122</TIMEOUT>
+    <SCS></SCS>
+  </CommsChannel>
+</ConnectionConfiguration>
