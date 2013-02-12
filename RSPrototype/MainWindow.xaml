@@ -1,52 +1,82 @@
-﻿<Window x:Class="UsecaseScreenShots.MainWindow"
+﻿<Window x:Class="Yti.Yget.RemoteClient.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:model="clr-namespace:UsecaseScreenShots"
-        Title="MainWindow" Height="409" Width="557">
+        xmlns:model="clr-namespace:Yti.Yget.RemoteClient"
+        Title="MainWindow" Height="460" Width="731">
+    
     <Border BorderBrush="Black" BorderThickness="1" Margin="1">
         <Grid>
-        
-        <Grid.RowDefinitions >
-            <RowDefinition Height="1*"/>
-            <RowDefinition Height="2*"/>
-            <RowDefinition Height="7*"/>
             
-        </Grid.RowDefinitions>
-        <Grid Grid.Row="0" Background="Gray">
-            <TextBlock FontSize="18" Text=" SCS Connection Configuration"></TextBlock> 
-        </Grid>
+            <Grid.RowDefinitions >
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="7*"/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0" Background="Gray">
+                <TextBlock FontSize="18" Text=" SCS Connection Configuration"></TextBlock>
+            </Grid>
             <Border Grid.Row="1" BorderBrush="Black" BorderThickness="1" Margin="1">
-                <Grid Grid.Row="1" >
+            <Grid Grid.Row="1" >
                 <Grid.ColumnDefinitions >
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="4*"/>
+                    <ColumnDefinition Width="1*"/>
                     <ColumnDefinition Width="3*"/>
-                    <ColumnDefinition Width="7*"/>
-                </Grid.ColumnDefinitions>
-                    <Button Margin="10" Grid.Column="0" Content="Connect" Command="{Binding ConnectCommand}" />
-                <Grid Grid.Column="1">
-                    <Grid.RowDefinitions >
-                        <RowDefinition Height="5*"/>
-                        <RowDefinition Height="5*"/>
-                    </Grid.RowDefinitions>
-                    <ComboBox Margin="5" Grid.Row="0" AllowDrop="True" >
-                    <ComboBoxItem IsSelected="True" FontStyle="Oblique" FontSize="15"   >192.168.2.1</ComboBoxItem>
-                    <ComboBoxItem >192.168.2.2</ComboBoxItem>
-                </ComboBox>
-                <ComboBox Margin="5" Grid.Row="1" AllowDrop="True" >
-                    <ComboBoxItem IsSelected="True" FontStyle="Oblique" FontSize="15"   >SCS1</ComboBoxItem>
-                    <ComboBoxItem >SCS2</ComboBoxItem>
-                </ComboBox>
-                </Grid>
+                </Grid.ColumnDefinitions> 
+                
+                <Label Grid.Column="0" Margin="2" HorizontalAlignment="Center"  VerticalAlignment="Center" Content="Configuration File "/>
+                <TextBox Grid.Column="1" Margin="3"/>
+                    <Button Grid.Column="2" Margin="3" Content="Browse" Command="{Binding SelectFileCommand}" />
             </Grid>
             </Border>
             <Border Grid.Row="2" BorderBrush="Black" BorderThickness="1" Margin="1">
                 <Grid Grid.Row="2" >
+                    <Grid.ColumnDefinitions >
+                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition Width="0.5*"/>
+                        <ColumnDefinition Width="1.5*"/>
+                    </Grid.ColumnDefinitions>
+                    
+                    
+                    <!--List of available channels-->
+                    <ComboBox Margin="5" Grid.Column="0" AllowDrop="True" ItemsSource="{Binding Path=ChannelNames }" >
+                    </ComboBox>
+                    
+                    
+
+                    <ComboBox Margin="5" Grid.Column="1" AllowDrop="True" >
+                        <ComboBoxItem IsSelected="True" FontStyle="Oblique" FontSize="15" >192.168.2.1</ComboBoxItem>
+                        <ComboBoxItem >192.168.2.2</ComboBoxItem>
+                    </ComboBox>
+                    
+                    <ComboBox Margin="5" Grid.Column ="2" AllowDrop="True" >
+                        <ComboBoxItem IsSelected="True" FontStyle="Oblique" FontSize="15"   >SCS1</ComboBoxItem>
+                        <ComboBoxItem >SCS2</ComboBoxItem>
+                    </ComboBox>
+                    <ComboBox Margin="5" Grid.Column ="3" AllowDrop="True" >
+                        <ComboBoxItem IsSelected="True" FontStyle="Oblique" FontSize="15"   >Connect</ComboBoxItem>
+                        <ComboBoxItem FontStyle="Oblique" FontSize="15">START</ComboBoxItem>
+                        <ComboBoxItem FontStyle="Oblique" FontSize="15">PAUSE</ComboBoxItem>
+                        <ComboBoxItem FontStyle="Oblique" FontSize="15">RESUME</ComboBoxItem>
+                        <ComboBoxItem FontStyle="Oblique" FontSize="15">STOP</ComboBoxItem>
+                        <ComboBoxItem FontStyle="Oblique" FontSize="15">READ</ComboBoxItem>
+                    </ComboBox>
+                    <Button Margin="5" Grid.Column="4" Content="Go" Command="{Binding ConnectCommand}" />
+                </Grid>
+            </Border>
+            <Border Grid.Row="3" BorderBrush="Black" BorderThickness="1" Margin="1">
+                <Grid Grid.Row="3" >
                 <Grid.RowDefinitions >
                         <RowDefinition Height="1*"/>
                         <RowDefinition Height="9*"/>
                     </Grid.RowDefinitions>
-                    <TextBlock Grid.Row="0" FontSize="14" VerticalAlignment="Center" HorizontalAlignment="Left" Text=" Connection Details"></TextBlock>
-                    <TextBox Grid.Row="1" IsEnabled="False" Text="SCS1 is a SIMULATOR. Selected SCS is ready for Connection">
-                        </TextBox>
+                    <TextBlock  Grid.Row="0" FontSize="14" VerticalAlignment="Center" HorizontalAlignment="Left" Text=" Connection Details"></TextBlock>
+                    <TextBlock  Grid.Row="1" Text="{ Binding Path=PushToLogWindow}" >
+                    </TextBlock>
                 </Grid>
             </Border>
 
