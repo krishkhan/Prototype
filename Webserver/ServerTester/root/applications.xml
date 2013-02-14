@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Applications>
+
+
+  <Application>
+    <Name>Chat</Name>
+    <AssemblyPath>Demos.dll</AssemblyPath>
+    <ApplicationSettingsClass>Chat.HttpApplication.ChatServerConfiguration</ApplicationSettingsClass>
+    <ApplicationClass>Chat.HttpApplication.ChatServer</ApplicationClass>
+    <ApplicationRootPath></ApplicationRootPath>
+  </Application>
+
+
+  <Application>
+    <Name>Desktop viewer</Name>
+    <AssemblyPath>Demos.dll</AssemblyPath>
+    <ApplicationSettingsClass>DesktopViewer.Application.DesktopViewerSettings</ApplicationSettingsClass>
+    <ApplicationClass>DesktopViewer.Application.DesktopViewer</ApplicationClass>
+    <ApplicationRootPath></ApplicationRootPath>
+  
+  </Application>
+
+
+</Applications>

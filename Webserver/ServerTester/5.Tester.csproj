@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{199BED90-407B-4FB9-BA08-F22D4F6C473D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>webserver.tester</RootNamespace>
+    <AssemblyName>webserver.tester</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>PublicSettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Demos\Demos.csproj">
+      <Project>{EEA22DD5-EC80-402E-8188-71F0E24CD633}</Project>
+      <Name>Demos %28Demos\Demos%29</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SocketEngine\1.SocketEngine.csproj">
+      <Project>{91BFBC81-7EE5-42F2-B21B-7F862FBACEF6}</Project>
+      <Name>1.SocketEngine</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CommonLibrary\0.ServerCommonLibrary.csproj">
+      <Project>{9E53A323-6BA6-4B08-8072-710AB1960FDA}</Project>
+      <Name>0.ServerCommonLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ComunicationLayer\2.ComunicationLayer.csproj">
+      <Project>{982AA2AB-2EE7-4B6A-9785-D08639BB7038}</Project>
+      <Name>2.ComunicationLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MainBiz\3.BizApplication.csproj">
+      <Project>{28893170-41ED-4382-B118-C64D54E95008}</Project>
+      <Name>3.BizApplication</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Server\4.Server.csproj">
+      <Project>{64C58340-E35A-43F0-9446-5602C27D09E0}</Project>
+      <Name>4.Server</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="root\404.html" />
+    <Content Include="root\applications.xml" />
+    <Content Include="root\chat\index.html" />
+    <Content Include="root\chat\chat.css" />
+    <Content Include="root\chat\room.css" />
+    <Content Include="root\chat\room2.html" />
+    <Content Include="root\chat\Script\Ajax.js" />
+    <Content Include="root\cornerlefttop.jpg" />
+    <Content Include="root\desk\index.html" />
+    <Content Include="root\desk\Script\Ajax.js" />
+    <Content Include="root\desk\style.css" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

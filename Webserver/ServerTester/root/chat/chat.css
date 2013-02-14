@@ -1,0 +1,81 @@
+*
+{
+    font-weight: bold;
+    color: #343434;
+    margin: 0px;
+    padding: 0px;
+    outline: none;
+}
+
+
+
+div
+{
+    width: 250px;
+    padding: 20px;
+    border: 1px solid #777777;
+    margin-top: 5%;
+    margin-left: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #E6E6E6; /*** Adding in CSS3 ***/ /*** Rounded Corners ***/
+    -moz-border-radius: 20px;
+    -webkit-border-radius: 20px; /*** Background Gradient - 2 declarations one for Firefox and one for Webkit ***/
+    background: -moz-linear-gradient(19% 75% 90deg,#938C97, #E6E6E6);
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#E6E6E6), to(#938C97)); /*** Shadow behind the box ***/
+    -moz-box-shadow: 0px -5px 300px #270644;
+    -webkit-box-shadow: 0px -5px 300px #270644;
+}
+
+span
+{
+    padding: 20px;
+    font-size: 12px;
+    font-family: arial, sans-serif;
+    list-style-type: none;
+    margin-bottom: 10px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    display: block; /*** Adding in CSS3 ***/
+    text-shadow: #C1C1C1 1px 1px;
+}
+
+input
+{
+    width: 230px;
+    background: #C5E4FC;
+    padding: 6px;
+    margin-bottom: 10px;
+    border-top: 1px solid #54697B;
+    border-left: 0px;
+    border-right: 0px;
+    border-bottom: 0px; /*** Adding CSS3 ***/ /*** Transition Selectors - What properties to animate and how long ***/
+    -webkit-transition-property: -webkit-box-shadow, background;
+    -webkit-transition-duration: 0.25s; /*** Adding a small shadow ***/
+    -moz-box-shadow: 0px 0px 2px #000;
+    -webkit-box-shadow: 0px 0px 2px #000;
+}
+input:hover
+{
+    background: #E4F0FF; /*** Adding CSS3 ***/
+    -webkit-box-shadow: 0px 0px 4px #000;
+}
+
+input.submit
+{
+    width: 100px;
+    text-transform: uppercase;
+    border-top: 1px solid #B9D6F7;
+    margin-top: 10px; /*** Adding CSS3 Gradients ***/
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#94C1F4), to(#37689F));
+    background: -moz-linear-gradient(19% 75% 90deg,#37689F, #94C1F4);
+}
+
+input.submit:hover
+{
+    cursor: crosshair;
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#94C1F4), to(#37689F));
+    background: -moz-linear-gradient(19% 75% 90deg,#37689F, #94C1F4);
+    -webkit-box-shadow: 0px 0px 2px #000;
+}

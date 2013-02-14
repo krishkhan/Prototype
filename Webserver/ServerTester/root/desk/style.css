@@ -1,0 +1,33 @@
+﻿*
+{
+    margin: 0;
+    padding: 0;
+}
+body
+{
+    color: #ffffff;
+}
+
+table tr td 
+{
+    padding-left:20px;
+    }
+    
+input
+{
+    
+    display: inline-block;
+    padding: 4px;
+    margin: 4px;
+    font-weight: bold;
+    height: 30px;
+    color: #3a3a3a;
+ 
+}
+input[type=checkbox]
+{
+    width: 20px;
+    margin: 0;
+    display: inline-block;
+}
+

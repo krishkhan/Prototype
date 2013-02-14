@@ -1,0 +1,18 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Server.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="HttpServiceRoot" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">..\\..\\root</Value>
+    </Setting>
+    <Setting Name="DefaultPage" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">404.html</Value>
+    </Setting>
+    <Setting Name="ApplicationXmlFile" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">..\\..\\root\\applications.xml</Value>
+    </Setting>
+    <Setting Name="CurrentDomain" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">localhost</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
