@@ -257,11 +257,11 @@ namespace Yti.Yget.RemoteClient
         }
     }
 
-    public static class CommsCommands
-    {
-        public static RoutedCommand ConnectToPort = new RoutedCommand();
-        public static RoutedCommand SelectFile = new RoutedCommand();
-    }
+    //public static class CommsCommands
+    //{
+    //    public static RoutedCommand ConnectToPort = new RoutedCommand();
+    //    public static RoutedCommand SelectFile = new RoutedCommand();
+    //}
 
 
     public class CommsObject
