@@ -146,6 +146,7 @@ namespace Yti.Yget.RemoteClient
                 // Connect the socket to the remote endpoint. Catch any errors.
                 try
                 {
+                    
                     sender.Connect(remoteEP);
 
                     PushToLogWindow = (String.Format("Socket connected to {0}", sender.RemoteEndPoint.ToString()));
@@ -162,8 +163,8 @@ namespace Yti.Yget.RemoteClient
                     PushToLogWindow = (String.Format("Echoed test = {0}", Encoding.ASCII.GetString(bytes, 0, bytesRec)));
 
                     // Release the socket.
-                    sender.Shutdown(SocketShutdown.Both);
-                    sender.Close();
+                    //sender.Shutdown(SocketShutdown.Both);
+                    //sender.Close();
 
                 }
                 catch (ArgumentNullException ane)

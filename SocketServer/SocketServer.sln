@@ -1,12 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YGetRemoteClient", "RSPrototype\YGetRemoteClient.csproj", "{726C5953-AE35-4560-BD36-9CE3F6741754}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YgetWrapperServer", "YgetWrapperServer\YgetWrapperServer.csproj", "{C409EA33-3AFD-42E2-A336-897FD6721D17}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Server", "Server\Server.csproj", "{6B6A3D83-6523-4F25-8EAD-4DF869515FA8}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SocketEngine", "SocketEngine\SocketEngine.csproj", "{91BFBC81-7EE5-42F2-B21B-7F862FBACEF6}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServerCommonLibrary", "CommonLibrary\ServerCommonLibrary.csproj", "{9E53A323-6BA6-4B08-8072-710AB1960FDA}"
@@ -23,36 +17,6 @@ Global
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{726C5953-AE35-4560-BD36-9CE3F6741754}.Debug|Any CPU.ActiveCfg = Debug|x86
-		{726C5953-AE35-4560-BD36-9CE3F6741754}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
-		{726C5953-AE35-4560-BD36-9CE3F6741754}.Debug|Mixed Platforms.Build.0 = Debug|x86
-		{726C5953-AE35-4560-BD36-9CE3F6741754}.Debug|x86.ActiveCfg = Debug|x86
-		{726C5953-AE35-4560-BD36-9CE3F6741754}.Debug|x86.Build.0 = Debug|x86
-		{726C5953-AE35-4560-BD36-9CE3F6741754}.Release|Any CPU.ActiveCfg = Release|x86
-		{726C5953-AE35-4560-BD36-9CE3F6741754}.Release|Mixed Platforms.ActiveCfg = Release|x86
-		{726C5953-AE35-4560-BD36-9CE3F6741754}.Release|Mixed Platforms.Build.0 = Release|x86
-		{726C5953-AE35-4560-BD36-9CE3F6741754}.Release|x86.ActiveCfg = Release|x86
-		{726C5953-AE35-4560-BD36-9CE3F6741754}.Release|x86.Build.0 = Release|x86
-		{C409EA33-3AFD-42E2-A336-897FD6721D17}.Debug|Any CPU.ActiveCfg = Debug|x86
-		{C409EA33-3AFD-42E2-A336-897FD6721D17}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
-		{C409EA33-3AFD-42E2-A336-897FD6721D17}.Debug|Mixed Platforms.Build.0 = Debug|x86
-		{C409EA33-3AFD-42E2-A336-897FD6721D17}.Debug|x86.ActiveCfg = Debug|x86
-		{C409EA33-3AFD-42E2-A336-897FD6721D17}.Debug|x86.Build.0 = Debug|x86
-		{C409EA33-3AFD-42E2-A336-897FD6721D17}.Release|Any CPU.ActiveCfg = Release|x86
-		{C409EA33-3AFD-42E2-A336-897FD6721D17}.Release|Mixed Platforms.ActiveCfg = Release|x86
-		{C409EA33-3AFD-42E2-A336-897FD6721D17}.Release|Mixed Platforms.Build.0 = Release|x86
-		{C409EA33-3AFD-42E2-A336-897FD6721D17}.Release|x86.ActiveCfg = Release|x86
-		{C409EA33-3AFD-42E2-A336-897FD6721D17}.Release|x86.Build.0 = Release|x86
-		{6B6A3D83-6523-4F25-8EAD-4DF869515FA8}.Debug|Any CPU.ActiveCfg = Debug|x86
-		{6B6A3D83-6523-4F25-8EAD-4DF869515FA8}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
-		{6B6A3D83-6523-4F25-8EAD-4DF869515FA8}.Debug|Mixed Platforms.Build.0 = Debug|x86
-		{6B6A3D83-6523-4F25-8EAD-4DF869515FA8}.Debug|x86.ActiveCfg = Debug|x86
-		{6B6A3D83-6523-4F25-8EAD-4DF869515FA8}.Debug|x86.Build.0 = Debug|x86
-		{6B6A3D83-6523-4F25-8EAD-4DF869515FA8}.Release|Any CPU.ActiveCfg = Release|x86
-		{6B6A3D83-6523-4F25-8EAD-4DF869515FA8}.Release|Mixed Platforms.ActiveCfg = Release|x86
-		{6B6A3D83-6523-4F25-8EAD-4DF869515FA8}.Release|Mixed Platforms.Build.0 = Release|x86
-		{6B6A3D83-6523-4F25-8EAD-4DF869515FA8}.Release|x86.ActiveCfg = Release|x86
-		{6B6A3D83-6523-4F25-8EAD-4DF869515FA8}.Release|x86.Build.0 = Release|x86
 		{91BFBC81-7EE5-42F2-B21B-7F862FBACEF6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{91BFBC81-7EE5-42F2-B21B-7F862FBACEF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{91BFBC81-7EE5-42F2-B21B-7F862FBACEF6}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU

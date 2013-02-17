@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Yti.Yget.RemoteClient
+namespace Yti.Yget.Communication
 {
     public interface ICommsChannel
     {
@@ -11,8 +11,8 @@ namespace Yti.Yget.RemoteClient
 
         Boolean Disconnect();
 
-        Boolean Send(String data);
+        String Tranceive(out String data); 
 
-        Boolean Receive(out String data); 
+
     }
 }

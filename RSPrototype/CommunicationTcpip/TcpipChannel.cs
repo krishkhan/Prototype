@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Yti.Yget.Communication;     
 
-namespace Yti.Yget.RemoteClient
+namespace Yti.Yget.Communication
 {
     class TcpipChannel: ICommsChannel 
     {
@@ -24,12 +25,7 @@ namespace Yti.Yget.RemoteClient
             throw new NotImplementedException();
         }
 
-        public bool Send(string data)
-        {
-            throw new NotImplementedException();
-        }
-
-        public bool Receive(out string data)
+        public string Tranceive(out string data)
         {
             throw new NotImplementedException();
         }
