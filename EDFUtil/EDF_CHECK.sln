@@ -1,0 +1,42 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EDFViewer", "EDFViewer\EDFViewer.csproj", "{84E4B100-7FEE-4871-9C40-71E138DEF17C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EDFParser", "EDFParser\EDFParser.csproj", "{54D70C23-AE3B-41BB-80ED-6CDF7D7C9C59}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Debug|Win32 = Debug|Win32
+		Release|Any CPU = Release|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{84E4B100-7FEE-4871-9C40-71E138DEF17C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84E4B100-7FEE-4871-9C40-71E138DEF17C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84E4B100-7FEE-4871-9C40-71E138DEF17C}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{84E4B100-7FEE-4871-9C40-71E138DEF17C}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{84E4B100-7FEE-4871-9C40-71E138DEF17C}.Debug|Win32.ActiveCfg = Debug|Any CPU
+		{84E4B100-7FEE-4871-9C40-71E138DEF17C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{84E4B100-7FEE-4871-9C40-71E138DEF17C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{84E4B100-7FEE-4871-9C40-71E138DEF17C}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{84E4B100-7FEE-4871-9C40-71E138DEF17C}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{84E4B100-7FEE-4871-9C40-71E138DEF17C}.Release|Win32.ActiveCfg = Release|Any CPU
+		{54D70C23-AE3B-41BB-80ED-6CDF7D7C9C59}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54D70C23-AE3B-41BB-80ED-6CDF7D7C9C59}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54D70C23-AE3B-41BB-80ED-6CDF7D7C9C59}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{54D70C23-AE3B-41BB-80ED-6CDF7D7C9C59}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{54D70C23-AE3B-41BB-80ED-6CDF7D7C9C59}.Debug|Win32.ActiveCfg = Debug|Any CPU
+		{54D70C23-AE3B-41BB-80ED-6CDF7D7C9C59}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54D70C23-AE3B-41BB-80ED-6CDF7D7C9C59}.Release|Any CPU.Build.0 = Release|Any CPU
+		{54D70C23-AE3B-41BB-80ED-6CDF7D7C9C59}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{54D70C23-AE3B-41BB-80ED-6CDF7D7C9C59}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{54D70C23-AE3B-41BB-80ED-6CDF7D7C9C59}.Release|Win32.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

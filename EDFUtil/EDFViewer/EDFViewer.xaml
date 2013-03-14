@@ -1,0 +1,61 @@
+﻿<Window x:Class="EDFViewer.Window1"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="EDF Viewer" Height="400" Width="620" WindowStartupLocation="CenterScreen">
+    <Border BorderBrush="Aqua" BorderThickness="2">
+        <Grid Height="Auto" Width="auto" Margin="4">
+
+            <Grid.RowDefinitions >
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="4*"/>
+                <RowDefinition Height="5*"/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0" Background="Beige" >
+                <Grid.ColumnDefinitions >
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="6.5*"/>
+                    <ColumnDefinition Width="1.5*"/>
+                </Grid.ColumnDefinitions>
+                <Label  Grid.Column="0"  HorizontalAlignment="Center" >
+                    <TextBlock>EDF File</TextBlock>
+                </Label>
+                <Button Grid.Column="2" Click="Button_Click" Background="Beige" >Browse</Button>
+                <TextBox Grid.Column="1" Text="{Binding Path=EDFFileName,UpdateSourceTrigger=PropertyChanged}"  BorderBrush="Beige" BorderThickness="1" Margin="2"/>
+            </Grid>
+            <Grid Grid.Row="1" Margin="2">
+                <Grid.RowDefinitions >
+                    <RowDefinition Height="1.25*"/>
+                    <RowDefinition Height="1.25*"/>
+                    <RowDefinition Height="1.25*"/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="4*"/>
+                        <ColumnDefinition Width="6*"/>
+                    </Grid.ColumnDefinitions>
+                    <Button Grid.Column="0" Margin="25,5,25,5" Click="OnCheckDrawingSheetName">Check Drawing Sheet Name</Button>
+                    <TextBlock Grid.Column="1" Margin="25,5,20,5" Background="Beige"></TextBlock>
+                </Grid>
+                <Grid Grid.Row="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="4*"/>
+                        <ColumnDefinition Width="6*"/>
+                    </Grid.ColumnDefinitions>
+                    <Button Grid.Column="0" Margin="25,5,25,5" Click="OnCheckFunctionBlock" >Check Function Block</Button>
+                    <TextBlock Grid.Column="1" Margin="25,5,20,5" Background="Beige"></TextBlock>
+                </Grid>
+                <Grid Grid.Row="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="4*"/>
+                        <ColumnDefinition Width="6*"/>
+                    </Grid.ColumnDefinitions>
+                    <Button Grid.Column="0" Margin="25,5,25,5" Click="OnCheckDrawingSheetComment" >Check Drawing Sheet Comment</Button>
+                    <TextBlock Grid.Column="1" Margin="25,5,20,5" Background="Beige"></TextBlock>
+                </Grid>
+
+
+            </Grid>
+
+        </Grid>
+    </Border>
+</Window>
