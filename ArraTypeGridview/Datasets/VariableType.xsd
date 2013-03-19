@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="VariableType" targetNamespace="http://tempuri.org/VariableType.xsd" xmlns:mstns="http://tempuri.org/VariableType.xsd" xmlns="http://tempuri.org/VariableType.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="VariableType" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="VariableType" msprop:Generator_DataSetName="VariableType" msprop:EnableTableAdapterManager="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="VariableType" msprop:Generator_UserTableName="VariableType" msprop:Generator_RowDeletedName="VariableTypeRowDeleted" msprop:Generator_RowChangedName="VariableTypeRowChanged" msprop:Generator_RowClassName="VariableTypeRow" msprop:Generator_RowChangingName="VariableTypeRowChanging" msprop:Generator_RowEvArgName="VariableTypeRowChangeEvent" msprop:Generator_RowEvHandlerName="VariableTypeRowChangeEventHandler" msprop:Generator_TableClassName="VariableTypeDataTable" msprop:Generator_TableVarName="tableVariableType" msprop:Generator_RowDeletingName="VariableTypeRowDeleting" msprop:Generator_TablePropName="_VariableType">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Name" msprop:Generator_UserColumnName="Name" msprop:Generator_ColumnVarNameInTable="columnName" msprop:Generator_ColumnPropNameInRow="Name" msprop:Generator_ColumnPropNameInTable="NameColumn" type="xs:string" />
+              <xs:element name="Type" msprop:Generator_UserColumnName="Type" msprop:Generator_ColumnVarNameInTable="columnType" msprop:Generator_ColumnPropNameInRow="Type" msprop:Generator_ColumnPropNameInTable="TypeColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Description" msprop:Generator_UserColumnName="Description" msprop:Generator_ColumnVarNameInTable="columnDescription" msprop:Generator_ColumnPropNameInRow="Description" msprop:Generator_ColumnPropNameInTable="DescriptionColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ArrayVariable" msprop:Generator_UserTableName="ArrayVariable" msprop:Generator_RowDeletedName="ArrayVariableRowDeleted" msprop:Generator_RowChangedName="ArrayVariableRowChanged" msprop:Generator_RowClassName="ArrayVariableRow" msprop:Generator_RowChangingName="ArrayVariableRowChanging" msprop:Generator_RowEvArgName="ArrayVariableRowChangeEvent" msprop:Generator_RowEvHandlerName="ArrayVariableRowChangeEventHandler" msprop:Generator_TableClassName="ArrayVariableDataTable" msprop:Generator_TableVarName="tableArrayVariable" msprop:Generator_RowDeletingName="ArrayVariableRowDeleting" msprop:Generator_TablePropName="ArrayVariable">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Name" msprop:Generator_UserColumnName="Name" msprop:Generator_ColumnVarNameInTable="columnName" msprop:Generator_ColumnPropNameInRow="Name" msprop:Generator_ColumnPropNameInTable="NameColumn" type="xs:string" />
+              <xs:element name="Description" msprop:Generator_UserColumnName="Description" msprop:Generator_ColumnVarNameInTable="columnDescription" msprop:Generator_ColumnPropNameInRow="Description" msprop:Generator_ColumnPropNameInTable="DescriptionColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:VariableType" />
+      <xs:field xpath="mstns:Name" />
+    </xs:unique>
+    <xs:unique name="ArrayVariable_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:ArrayVariable" />
+      <xs:field xpath="mstns:Name" />
+    </xs:unique>
+  </xs:element>
+  <xs:annotation>
+    <xs:appinfo>
+      <msdata:Relationship name="ArrayVariable_VariableType" msdata:parent="ArrayVariable" msdata:child="VariableType" msdata:parentkey="Name" msdata:childkey="Name" msprop:Generator_UserRelationName="ArrayVariable_VariableType" msprop:Generator_RelationVarName="relationArrayVariable_VariableType" msprop:Generator_UserChildTable="VariableType" msprop:Generator_UserParentTable="ArrayVariable" msprop:Generator_ParentPropName="ArrayVariableRow" msprop:Generator_ChildPropName="GetVariableTypeRows" />
+    </xs:appinfo>
+  </xs:annotation>
+</xs:schema>
