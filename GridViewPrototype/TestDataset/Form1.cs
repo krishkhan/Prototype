@@ -1,0 +1,32 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Windows.Forms;
+
+namespace TestDataset
+{
+     
+    public partial class Form1 : Form
+    {
+        private ObjectList _objectList = new ObjectList(); 
+        
+        public Form1()
+        {
+            InitializeComponent();
+            
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+           //this.DataTable1BindingSource.DataSource = _objectList.GetListOfObjects();
+            
+           this.variableDetailsDataSetBindingSource.DataSource = _objectList.GetListOfObjects();  
+           
+        }
+    }
+}
