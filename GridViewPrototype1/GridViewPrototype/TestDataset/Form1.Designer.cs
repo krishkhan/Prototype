@@ -34,9 +34,10 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.DataSet1 = new TestDataset.DataSet1();
-            this.variableDetailsDataSet = new TestDataset.VariableDetailsDataSet();
             this.variableDetailsDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.variableDetailsDataSet = new TestDataset.VariableDetailsDataSet();
+            this.DataTable1BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.DataSet1 = new TestDataset.DataSet1();
             this.variableTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.variableTableTableAdapter = new TestDataset.VariableDetailsDataSetTableAdapters.VariableTableTableAdapter();
             this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -45,9 +46,10 @@
             this.scopeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.variableDetailsDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.variableDetailsDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.variableDetailsDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DataTable1BindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.variableTableBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -89,23 +91,28 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.dataGridView1.Size = new System.Drawing.Size(717, 284);
+            this.dataGridView1.Size = new System.Drawing.Size(732, 555);
             this.dataGridView1.TabIndex = 1;
             // 
-            // DataSet1
+            // variableDetailsDataSetBindingSource
             // 
-            this.DataSet1.DataSetName = "DataSet1";
-            this.DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.variableDetailsDataSetBindingSource.DataSource = this.variableDetailsDataSet;
+            this.variableDetailsDataSetBindingSource.Position = 0;
             // 
             // variableDetailsDataSet
             // 
             this.variableDetailsDataSet.DataSetName = "VariableDetailsDataSet";
             this.variableDetailsDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // variableDetailsDataSetBindingSource
+            // DataTable1BindingSource
             // 
-            this.variableDetailsDataSetBindingSource.DataSource = this.variableDetailsDataSet;
-            this.variableDetailsDataSetBindingSource.Position = 0;
+            this.DataTable1BindingSource.DataMember = "DataTable1";
+            this.DataTable1BindingSource.DataSource = this.DataSet1;
+            // 
+            // DataSet1
+            // 
+            this.DataSet1.DataSetName = "DataSet1";
+            this.DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // variableTableBindingSource
             // 
@@ -156,9 +163,10 @@
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.variableDetailsDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.variableDetailsDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.variableDetailsDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DataTable1BindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.variableTableBindingSource)).EndInit();
             this.ResumeLayout(false);
 
@@ -166,6 +174,7 @@
 
         #endregion
 
+        private System.Windows.Forms.BindingSource DataTable1BindingSource;
         private DataSet1 DataSet1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.BindingSource variableDetailsDataSetBindingSource;

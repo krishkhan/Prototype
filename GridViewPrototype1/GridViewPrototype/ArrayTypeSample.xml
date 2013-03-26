@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<pous>
+  <inteface>
+    <localVariables>
+      <variableArray name ="test">
+        <dimension>[1..4]</dimension>
+        <description>This is a parent</description>
+        <variable>
+          <description>This is defined in an Array</description>
+          <type>REAL</type>
+          <initialValue>100.0</initialValue>
+        </variable>
+      </variableArray>
+      
+      <variable>
+        <type>REAL</type>
+        <initialValue>100.0</initialValue>
+      </variable>
+      
+      <variable>
+        <type>REAL</type>
+        <initialValue>100.0</initialValue>
+      </variable>
+      
+    </localVariables>
+  </inteface>
+</pous>

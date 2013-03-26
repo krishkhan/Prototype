@@ -25,12 +25,9 @@ namespace TestDataset
         {
             // TODO: This line of code loads data into the 'variableDetailsDataSet.VariableTable' table. You can move, or remove it, as needed.
             this.variableTableTableAdapter.Fill(this.variableDetailsDataSet.VariableTable);
-            // TODO: This line of code loads data into the 'variableDetailsDataSet.VariableTable' table. You can move, or remove it, as needed.
-            this.variableTableTableAdapter.Fill(this.variableDetailsDataSet.VariableTable);
-           //this.DataTable1BindingSource.DataSource = _objectList.GetListOfObjects();
-            
-           this.variableDetailsDataSetBindingSource.DataSource = _objectList.GetListOfObjects();  
-           
+
+            this.variableDetailsDataSetBindingSource.DataSource = _objectList.GetListOfObjects();
+
         }
     }
 }
